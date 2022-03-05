@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Europa';
+  src: url('fonts/Europa-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Europa', sans-serif;
+}
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+section {
+  .mainContainer {
+    position: relative;
+  }
+}
+.mainContainer {
+  max-width: 1114px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+
+.btn {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-size: 16px;
+  line-height: 150%;
+  color: white;
+  background-color: #bf0830;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #8d0523;
+}
+.btnSection {
+  display: flex;
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  h2 {
+    color: #1a2578;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  span {
+    color: #484c63;
+    font-size: 22px;
+    font-weight: 400;
+  }
+}
+@import 'components/header.scss';
+@import 'styles/homePage.scss';

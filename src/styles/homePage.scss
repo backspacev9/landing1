@@ -1,0 +1,29 @@
+.build-products {
+  height: 815px;
+  background: linear-gradient(252.91deg, #e3e7f6 3.68%, rgba(227, 231, 246, 0) 97.82%);
+
+  .textSection {
+    max-width: 570px;
+    margin-top: 129px;
+    h2 {
+    }
+    span {
+      margin-top: 32px;
+    }
+    .btnSection {
+      margin-top: 40px;
+
+      button:nth-child(2) {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .build-productsImg {
+    position: absolute;
+    width: 847.36px;
+    height: 711.47px;
+    right: 17.64px;
+    top: 173px;
+  }
+}
