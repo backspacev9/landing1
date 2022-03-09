@@ -22,9 +22,12 @@ function html() {
     )
     .pipe(dest('dist'));
 }
+function js() {
+  return src('src/**.js').pipe(concat('index.js')).pipe(dest('dist'));
+}
 
 function assets() {
-  return src('public/**/*').pipe(dest('dist'));
+  return src('public/**/**').pipe(dest('dist'));
 }
 
 function scss() {
@@ -51,8 +54,10 @@ function serve() {
 
   watch('src/**/*.html', series(html)).on('change', sync.reload);
   watch('src/**/*.scss', series(scss)).on('change', sync.reload);
+  watch('public/**/*', series(assets)).on('change', sync.reload);
+  watch('src/**/*.js', series(js)).on('change', sync.reload);
 }
 
-exports.build = series(clear, scss, html, assets);
-exports.serve = series(clear, scss, html, assets, serve);
+exports.build = series(clear, scss, html, js, assets);
+exports.serve = series(clear, scss, html, js, assets, serve);
 exports.clear = clear;
