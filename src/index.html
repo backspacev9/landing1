@@ -9,23 +9,106 @@
 </head>
 <body>
   <section class="build-products">
-  
+  <main>
+    @@include('components/header.html')
     <div class="mainContainer">
-      @@include('components/header.html')
-      <img class="build-productsImg" src="img/build-products.svg" alt="">
       <div class="textSection">
-        <h2>We build products to simplify work for businesses</h2>
-        <span>Our next-gen products empower businesses to implement agility and accelerate growth.</span>
+        <h2 class="h2">We build products to simplify work for businesses</h2>
+        <span class="caption">Our next-gen products empower businesses to implement agility and accelerate growth.</span>
         <div class="btnSection">
           <button class="btn">Learn more</button>
           <button class="btn">Work with us</button>
         </div>
       </div>
-    
     </div>
+    <img class="build-productsImg" src="img/build-products.svg" alt="">
+  </main>
+   </section>
+  <section class="global-brands">
+  <main>
+    <div class="mainContainer">
+      <h2 class="h2">Over <span>1.3 million</span> users and global brands trust us</h2>
+      <div class="brandsContainer">
+        <div class="brandsItem">
+          <img src="img/brands/brand1.svg" alt="">
+        </div>
+        <div class="brandsItem">
+          <img src="img/brands/brand2.svg" alt="">
+        </div>
+        <div class="brandsItem">
+          <img src="img/brands/brand3.svg" alt="">
+        </div>
+        <div class="brandsItem">
+          <img src="img/brands/brand4.svg" alt="">
+        </div>
+        <div class="brandsItem">
+          <img src="img/brands/brand5.svg" alt="">
+        </div>
+        <div class="brandsItem">
+          <img src="img/brands/brand6.svg" alt="">
+        </div>
+        <div class="brandsItem">
+          <img src="img/brands/brand7.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+   </section>
+  <section class="line-of-products">
+  <main>
+    <div class="mainContainer">
+      <div class="textSection">
+        <h2 class="h2">Our line of products</h2>
+        <span>Here’s what we’re building to help businesses deliver amazing customer experiences.</span>
+      </div>
+      <div class="productsContainer">
+        <div class="cardProduct">
+          <div class="productContainer">
+            <img class="prodLogo" src="img/products/productsLogo1.svg" alt="">
+            <span class="prodCaption">Cookie consent solution for privacy compliance.</span>
+            <button class="btn">
+              <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_5967_386)">
+                <path d="M7.39375 13.0125L12.9049 7.50002L7.39235 1.98752M1.09375 7.50002H12.9063H1.09375Z" stroke="#BF0830" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_5967_386">
+                <rect width="14" height="14" fill="white" transform="translate(0 0.5)"/>
+                </clipPath>
+                </defs>
+              </svg>
+              Learn more
+            </button>
+          </div>
+          <img class="floatImg" src="img/products/productsScreen1.png" alt="">
+        </div>
+        <div class="cardProduct">
+          <div class="productContainer">
+            <img class="prodLogo" src="img/products/productsLogo2.svg" alt="">
+            <span class="prodCaption">Plugins and extensions for eCommerce needs.</span>
+            <button class="btn">
+              <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_5967_386)">
+                <path d="M7.39375 13.0125L12.9049 7.50002L7.39235 1.98752M1.09375 7.50002H12.9063H1.09375Z" stroke="#BF0830" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_5967_386">
+                <rect width="14" height="14" fill="white" transform="translate(0 0.5)"/>
+                </clipPath>
+                </defs>
+              </svg>
+              Learn more
+            </button>
+          </div>
+          <img class="floatImg" src="img/products/productsScreen2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
    </section>
  
 
   @@include('components/footer.html')
 </body>
+<script src="index.js"></script>
 </html>

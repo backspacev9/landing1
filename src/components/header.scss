@@ -1,10 +1,9 @@
 header {
   display: flex;
-  width: 100%;
   height: 100px;
   justify-content: space-between;
   align-items: center;
-
+  padding: 0 10px;
   ul {
     align-items: center;
     justify-content: center;
@@ -21,13 +20,97 @@ header {
       margin-left: 60px;
     }
     li:hover {
-      color: #bf0830;
+      color: $redColor;
     }
     li:nth-last-child(1) {
       margin-left: 30px;
     }
     .btn:hover {
       color: white;
+    }
+  }
+
+  .menuBtn {
+    display: none;
+    position: absolute;
+    right: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    span {
+      width: 100%;
+      height: 4px;
+      background: #464646;
+      transform-origin: left;
+      transition: 0.5s;
+    }
+  }
+  .menuBtn:hover {
+    span {
+      background-color: $redColor;
+    }
+  }
+  @media (max-width: $breakePoint815) {
+    nav {
+      display: none;
+    }
+    .menuBtn {
+      display: flex;
+    }
+  }
+}
+.activeMenu {
+  background-color: #464646;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    display: none;
+  }
+  .menuBtn {
+    top: 38px;
+    :hover {
+      background-color: $redColor;
+    }
+    .lines {
+      background-color: $redColor;
+    }
+    .lines:nth-child(1) {
+      transform: rotate(43deg);
+    }
+    .lines:nth-child(2) {
+      opacity: 0;
+    }
+    .lines:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+
+  nav {
+    display: flex;
+
+    ul {
+      flex-direction: column;
+      gap: 10px;
+      li {
+        margin: 0;
+        color: white;
+        font-size: 24px;
+        :hover {
+          color: $redColor;
+        }
+      }
+      .btn {
+        background-color: transparent;
+        padding: 0;
+        font-size: 24px;
+      }
     }
   }
 }

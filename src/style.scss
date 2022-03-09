@@ -1,7 +1,19 @@
+$breakePoint1250: 1250px;
+$breakePoint1020: 1020px;
+$breakePoint940: 940px;
+$breakePoint815: 815px;
+$breakePoint510: 510px;
+$mainWidth: 1114px;
+//colors
+$blueColor: #1a2578;
+$redColor: #bf0830;
 @font-face {
   font-family: 'Europa';
   src: url('fonts/Europa-Regular.ttf') format('truetype');
   font-weight: 400;
+}
+html {
+  min-width: 340px;
 }
 body {
   margin: 0;
@@ -19,12 +31,25 @@ h5 {
   padding: 0;
 }
 section {
+  main,
+  .mainContainer {
+    height: 100%;
+  }
+  main {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   .mainContainer {
     position: relative;
+    padding: 0 10px;
   }
 }
-.mainContainer {
-  max-width: 1114px;
+
+.mainContainer,
+header {
+  max-width: $mainWidth;
   margin: 0 auto;
 }
 a {
@@ -36,15 +61,18 @@ a:visited {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
   padding: 14px 32px;
   border: none;
   border-radius: 6px;
   font-weight: 500;
   letter-spacing: 0.04em;
   font-size: 16px;
+  line-height: 24px;
   line-height: 150%;
   color: white;
-  background-color: #bf0830;
+  background-color: $redColor;
   cursor: pointer;
 }
 .btn:hover {
@@ -53,21 +81,55 @@ a:visited {
 .btnSection {
   display: flex;
 }
-
+.h2 {
+  color: $blueColor;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 62px;
+}
 .textSection {
   display: flex;
   flex-direction: column;
-  max-width: 45%;
-  h2 {
-    color: #1a2578;
-    font-size: 48px;
-    font-weight: 700;
-  }
+
   span {
     color: #484c63;
     font-size: 22px;
-    font-weight: 400;
+    line-height: 33px;
+    margin-top: 16px;
+  }
+  .btn {
+    letter-spacing: 0.0025em;
   }
 }
+.productContainer {
+  display: flex;
+  flex-direction: column;
+
+  .prodCaption {
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 31px;
+    color: #3a3a3c;
+  }
+  .btn {
+    margin-top: 32px;
+    background-color: transparent;
+    border: 1px solid $redColor;
+    color: $redColor;
+    width: fit-content;
+    svg {
+      margin-right: 8px;
+    }
+  }
+  .btn:hover {
+    background-color: #bf0830;
+    color: #fff;
+    svg g path {
+      stroke: #fff;
+    }
+  }
+}
+
 @import 'components/header.scss';
 @import 'styles/homePage.scss';

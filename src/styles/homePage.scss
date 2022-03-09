@@ -1,5 +1,5 @@
 .build-products {
-  height: 815px;
+  padding-bottom: 210px;
   background: linear-gradient(252.91deg, #e3e7f6 3.68%, rgba(227, 231, 246, 0) 97.82%);
 
   .textSection {
@@ -9,12 +9,22 @@
     }
     span {
       margin-top: 32px;
+      width: 500px;
     }
     .btnSection {
       margin-top: 40px;
 
       button:nth-child(2) {
         margin-left: 16px;
+        background-color: transparent;
+        border: 1px solid $redColor;
+        box-sizing: border-box;
+        border-radius: 6px;
+        color: $redColor;
+      }
+      button:nth-child(2):hover {
+        background-color: $redColor;
+        color: #fff;
       }
     }
   }
@@ -22,8 +32,175 @@
   .build-productsImg {
     position: absolute;
     width: 847.36px;
-    height: 711.47px;
-    right: 17.64px;
+    right: 19.64px;
     top: 173px;
+  }
+  @media (max-width: $breakePoint1250) {
+    padding-bottom: 55px;
+    .build-productsImg {
+      width: 650px;
+      top: 170px;
+    }
+  }
+  @media (max-width: $breakePoint1020) {
+    .build-productsImg {
+      width: 400px;
+      top: 240px;
+    }
+  }
+  @media (max-width: $breakePoint815) {
+    padding-bottom: 70px;
+    .textSection {
+      margin-top: 20;
+    }
+    .build-productsImg {
+      position: relative;
+      top: 44px;
+      left: 10px;
+    }
+  }
+  @media (max-width: $breakePoint510) {
+    .textSection,
+    .caption,
+    .build-productsImg {
+      max-width: 320px;
+    }
+    .textSection {
+      h2 {
+        font-size: 32px;
+        line-height: 46px;
+      }
+    }
+  }
+}
+
+//-----------BRANDs------------------------------
+.global-brands {
+  display: flex;
+  height: 395px;
+  border-bottom: 1px solid rgba(197, 203, 226, 0.5);
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mainContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 57px;
+    width: 100%;
+    text-align: center;
+    span {
+      color: $redColor;
+    }
+  }
+  .brandsContainer {
+    display: flex;
+    margin-top: 80px;
+    width: 100%;
+    max-width: 1052px;
+    align-items: center;
+    justify-content: space-between;
+    .brandsItem {
+      display: flex;
+
+      img {
+      }
+    }
+    // .brandsItem:nth-child(n + 2) {
+    //   margin-left: 40px;
+    // }
+  }
+
+  @media (max-width: $breakePoint940) {
+    .brandsContainer {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      .brandsItem {
+        flex: 0 0 25%;
+      }
+    }
+  }
+  @media (max-width: $breakePoint815) {
+    .h2 {
+      text-align: left;
+      line-height: 40px;
+    }
+  }
+}
+
+//--------line-of-products--------------------
+.line-of-products {
+  min-height: 940px;
+
+  .textSection {
+    margin-top: 106px;
+    text-align: center;
+    .h2 {
+      font-size: 44px;
+      line-height: 57px;
+    }
+    span {
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+  .productsContainer {
+    margin-top: 97px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    .cardProduct:nth-child(1) .prodLogo {
+      width: 188px;
+    }
+    .cardProduct:nth-child(2) .prodLogo {
+      width: 220px;
+    }
+    .cardProduct {
+      position: relative;
+      display: flex;
+      width: 538px;
+      height: 530px;
+
+      box-shadow: 0px 0px 8px rgba(22, 23, 72, 0.07), 0px 25px 35px rgba(22, 23, 72, 0.08);
+      border-radius: 8px;
+      .productContainer {
+        margin: 64px 0 0 62px;
+        width: 352px;
+        height: 217px;
+      }
+
+      .floatImg {
+        position: absolute;
+        width: 460px;
+        bottom: 0;
+        left: 10px;
+      }
+      .floatImg:nth-child(2) {
+        left: 44px;
+        width: 460px;
+      }
+    }
+    @media (max-width: 1094px) {
+      .cardProduct:nth-child(n + 2) {
+        margin-top: 20px;
+      }
+    }
+    @media (max-width: 540px) {
+      .floatImg {
+        left: 10px !important;
+        width: 400px !important;
+      }
+    }
   }
 }
