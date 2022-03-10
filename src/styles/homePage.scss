@@ -160,11 +160,23 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-    .cardProduct:nth-child(1) .prodLogo {
-      width: 188px;
+    .cardProduct:nth-child(1) {
+      .prodLogo {
+        width: 188px;
+      }
+      .floatImg {
+        left: 10px;
+        width: 509px;
+      }
     }
-    .cardProduct:nth-child(2) .prodLogo {
-      width: 220px;
+    .cardProduct:nth-child(2) {
+      .prodLogo {
+        width: 220px;
+      }
+      .floatImg {
+        left: 44px;
+        width: 488px;
+      }
     }
     .cardProduct {
       position: relative;
@@ -182,13 +194,7 @@
 
       .floatImg {
         position: absolute;
-        width: 460px;
         bottom: 0;
-        left: 10px;
-      }
-      .floatImg:nth-child(2) {
-        left: 44px;
-        width: 460px;
       }
     }
     @media (max-width: 1094px) {

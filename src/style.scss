@@ -113,11 +113,14 @@ a:visited {
     color: #3a3a3c;
   }
   .btn {
-    margin-top: 32px;
+    margin: 32px 0 0 4px;
     background-color: transparent;
     border: 1px solid $redColor;
     color: $redColor;
+    font-size: 13px;
+    padding: 12px 24px;
     width: fit-content;
+    letter-spacing: 0.005em;
     svg {
       margin-right: 8px;
     }

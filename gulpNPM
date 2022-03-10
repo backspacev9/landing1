@@ -1,0 +1,2 @@
+npm install  gulp-cli -g
+npm install --save-dev gulp browser-sync del gulp-autoprefixer gulp-cli gulp-concat gulp-csso gulp-file-assets gulp-file-include gulp-htmlmin gulp-sass sass
